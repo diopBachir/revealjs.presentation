@@ -40,12 +40,12 @@ format:
     # collapse-callout:
     #   all: true
     # callout-appearance: simple
+    
 revealjs-plugins:
   - _extensions/fullscreen
   - pointer
-  - attribution
   # - spotlight
   - mathjax3eqno
   # - lightbox
-filters:
-  - reveal-header
+# filters:
+  # - reveal-header
