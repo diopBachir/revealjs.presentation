@@ -2,54 +2,7 @@
 engine: knitr
 # include-after-body: header_text.html
 bibliography: biblio.bib
-# reference-location: document
-# suppress-bibliography: true 
-
-format: 
-  revealjs:
-    html-math-method: mathjax
-    mermaid:
-      theme: dark
-    slide-number: true
-    chalkboard: true
-    code-link: true
-    highlight-style: a11y
-    show-slide-numbe: all
-    preview-links: true
-    width: 1200
-    smaller: true
-    scrollable: true
-    logo: assets/images/logo.jpg
-    theme: 
-      - styles.scss
-    footer: "THESE DE DOCTORAT"
-    # header: "SERIGNE BASSIROU DIOP"
-    auto-stretch: false
-    touch: true
-    controls: false
-    lightbox: auto
-    menu:
-      side: left
-      width: normal
-      numbers: false
-    pointer:
-      key: p
-      alwaysVisible: false
-      color: orange
-    # transition: slide
-    # collapse-callout:
-    #   all: true
-    # callout-appearance: simple
-revealjs-plugins:
-  - _extensions/fullscreen
-  - pointer
-  - attribution
-  # - spotlight
-  - mathjax3eqno
-  # - lightbox
-filters:
-  - reveal-header
-
+format: revealjs
 ---
 
 ## {#title-slide data-menu-title="Accueil" background-image="assets/images/background_image.jpg"} 
