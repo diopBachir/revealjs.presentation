@@ -57,7 +57,6 @@
 <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
 <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
 <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-<link href="site_libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
 <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
 <style type="text/css">
 
@@ -409,7 +408,7 @@
 <div id="tabset-1-1">
 <div class="body-text topbr bottombr">
 <p>Les données utilisées dans ce travail sont issues de la base de données <a href="https://doi.org/10.23708/LXGXQ9" target="_blank">ADHI (the African Database of Hydrometric Indices)</a>. <br></p>
-<p><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Mise en place par Tramblay <em>et al.</em> <span class="citation" data-cites="trambaly_et_al_2021_adhi">(<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, cette base de donne fournit une multitude d’indices hydrométriques et hydrologiques calculés à partir de différentes sources de données.<br></p>
+<p><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Mise en place par Tramblay <em>et al.</em> <span class="citation" data-cites="trambaly_et_al_2021_adhi">(<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, cette base de données fournit une multitude d’indices hydrométriques et hydrologiques calculés à partir de différentes sources de données.<br></p>
 <p><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Elle comprend 1466 stations, avec des séries de débits journaliers supérieures ou égales à 10 ans de données sur la période 1950-2018.<br></p>
 <p><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> La durée moyenne des relevés est de 33 ans et 131 stations ont des relevés complets sur 50 ans <span class="citation" data-cites="trambaly_et_al_2021_adhi">(<a href="#/references" role="doc-biblioref" onclick="">Tramblay et al. 2021</a>)</span>. <br></p>
 </div>
@@ -558,7 +557,7 @@
 <div id="tabset-1-3">
 <div class="body-text topbr bottombr">
 <div class="body-text">
-<p>La sélection des bassins a été effectuée sur la base de trois critères :</p>
+<p>La sélection des bassins a été effectuée sur la base de quatre critères :</p>
 </div>
 <div class="cell">
 <style type="text/css">
@@ -574,10 +573,10 @@
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong><span class="tabset-subtitle1">1. Profondeur temporelle des séries</span><br></strong></p>
+<p><strong><span class="tabset-subtitle1">1. Longueur des séries de données</span><br></strong></p>
 </div>
 <div class="callout-content">
-<p><span class="column-body-text">Ce critère renvoie à la profondeur temporelle des séries de maxima annuels de débits. L’approche <strong>Block-Maxima (BM)</strong> a permis de construire de telles séries. Une station doit avoir au moins 10 ans de données pour être sélectionnée dans cette première étape. La figure ci-contre montre la répartition spatiale des stations de la base ADHI (en Afrique de l’ouest) ayant des séries de maxima annuels supérieures ou égales à 10 ans. Au total, 318 stations ont plus de 10 ans de données sur les 441.</span></p>
+<p><span class="column-body-text">Ce critère renvoie à la profondeur temporelle des séries de maxima annuels de débits. L’approche <strong>Block-Maxima (BM)</strong> a permis de construire de telles séries. Une station doit avoir au moins 10 ans de données pour être sélectionnée dans cette première étape. La figure ci-contre montre la répartition spatiale des stations de la base ADHI (en Afrique de l’ouest) ayant des séries de maxima annuels supérieures ou égales à 10 ans. Au total, 318 stations ont au moins 10 ans de données sur les 441.</span></p>
 </div>
 </div>
 </div>
@@ -717,7 +716,7 @@
 </div>
 </div>
 <div class="justify">
-<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> Le contrôle de la série</strong> de renvoie aux tests d’hypothèses de stationnarité et d’indépendance.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> Le choix du modèle fréquentiel</strong> passe par l’ajustement de plusieurs distributions de probabilité, l’évaluation de la qualité d’ajustement de ces distributions et le choix du modèle qui s’ajuste le mieux aux données observées.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> L’exploitation du modèle fréquentiel</strong> permet d’estimer la probabilité ou la fréquence d’occurrence des quantiles spécifiques de débits.</span></p>
+<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> Le contrôle de la série</strong> de renvoie aux tests d’hypothèses de stationnarité et d’indépendance.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> Le choix du modèle fréquentiel</strong> passe par l’ajustement de plusieurs distributions de probabilité, l’évaluation de la qualité d’ajustement de ces distributions et le choix du modèle qui s’ajuste le mieux aux données observées.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i> L’exploitation du modèle fréquentiel</strong> permet d’estimer la probabilité d’occurrence des quantiles de débits.</span></p>
 </div>
 <!-- --------------------------------------------------------------- -->
 </div>
@@ -742,7 +741,7 @@
 <p><strong><span class="tabset-subtitle1">2. Contrôle des séries (hypothèses)</span><br></strong></p>
 </div>
 <div class="callout-content">
-<p><span class="column-body-text">Deux tests statistiques ont été appliqués aux séries de maxima annuels de débits à des seuils de significativité différents (1%, 5% et 10%).<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> le test non paramétrique de <strong>Mann-Kendall</strong> <span class="citation" data-cites="kendall_rank_1975 mann1945nonparametric">(<a href="#/references" role="doc-biblioref" onclick="">Kendall 1975</a> ; <a href="#/references" role="doc-biblioref" onclick="">Mann 1945</a>)</span> a été utilisée pour tester l’hypothèse de stationnarité dans les séries.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> le test d’indépendance de <strong>Wald-Wolfowitz</strong> <span class="citation" data-cites="wald_test_1940">(<a href="#/references" role="doc-biblioref" onclick="">Wald and Wolfowitz 1940</a>)</span> a été appliqué pour détecter l’existance d’une autocorrélation dans les séries de données.</span></p>
+<p><span class="column-body-text">Deux tests statistiques ont été appliqués aux séries de maxima annuels de débits à des seuils de significativité différents (1%, 5% et 10%).<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le test non paramétrique de <strong>Mann-Kendall</strong> <span class="citation" data-cites="kendall_rank_1975 mann1945nonparametric">(<a href="#/references" role="doc-biblioref" onclick="">Kendall 1975</a> ; <a href="#/references" role="doc-biblioref" onclick="">Mann 1945</a>)</span> a été utilisée pour tester l’hypothèse de stationnarité dans les séries.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le test d’indépendance de <strong>Wald-Wolfowitz</strong> <span class="citation" data-cites="wald_test_1940">(<a href="#/references" role="doc-biblioref" onclick="">Wald and Wolfowitz 1940</a>)</span> a été appliqué pour détecter l’existance d’une autocorrélation dans les séries de données.</span></p>
 </div>
 </div>
 </div>
@@ -770,7 +769,7 @@
 <p><strong><span class="tabset-subtitle1">4. Modèles non stationnaires</span><br></strong></p>
 </div>
 <div class="callout-content">
-<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> En contexte non-stationnaire, la méthode traditionnelle de l’analyse fréquentielle est inapplicable en raison du rejet des hypothèses de base (stationnarité et homogénéité).<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Une façon de prendre en compte cette tendance est d’établir une relation linéaire entre les paramètres du modèle fréquentiel et une ou plusieurs co-variables (le temps par exemple).<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Une simple tendance linéaire permet alors d’intégrer cette non-stationnarité dans l’analyse fréquentielle.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Pour la <strong>GEV</strong> par exemple, exprimons le paramètre de position <strong><span class="math inline">\(\mu\)</span></strong> comme une fonction linéaire du temps du temps <strong><span class="math inline">\(\mu_{(t)}\)</span></strong>. Un quantile de débit au temps <strong><span class="math inline">\(t\)</span></strong> peut être obtenu par la fonction quantile <strong><span class="math inline">\(Q_t = GEV_{(μ(t)}, \delta, \xi)\)</span></strong>, avec <strong><span class="math inline">\(Q_t\)</span></strong> représentant le quantile estmé, <strong><span class="math inline">\(\mu_{(t)} = \mu_0 + \mu1_{(t)}\)</span></strong> et <strong><span class="math inline">\(t\)</span></strong> étant un indicateur de temporelle.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Ainsi, on obtient un quantile pour chaque année. Le quantile de la dernière année est choisi et comparé au quantile issu du modèle stationnaire pour voir s’il y a de différences notables entre les modèles stationnaires et ceux non-stationnaires</span></p>
+<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> En contexte non-stationnaire, la méthode traditionnelle de l’analyse fréquentielle est inapplicable en raison du rejet des hypothèses de base (stationnarité et homogénéité).<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Une façon de prendre en compte cette tendance est d’établir une relation linéaire entre les paramètres du modèle fréquentiel et une ou plusieurs co-variables. Le temps a été prise comme covariable dans ce travail.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Une simple tendance linéaire permet alors d’intégrer cette non-stationnarité dans l’analyse fréquentielle.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Pour la <strong>GEV</strong> par exemple, exprimons le paramètre de position <strong><span class="math inline">\(\mu\)</span></strong> comme une fonction linéaire du temps <strong><span class="math inline">\(\mu_{(t)}\)</span></strong>. Un quantile de débit au temps <strong><span class="math inline">\(t\)</span></strong> peut être obtenu par la fonction quantile <strong><span class="math inline">\(Q_t = GEV_{(μ(t)}, \delta, \xi)\)</span></strong>, avec <strong><span class="math inline">\(Q_t\)</span></strong> représentant le quantile estmé, <strong><span class="math inline">\(\mu_{(t)} = \mu_0 + \mu1_{(t)}\)</span></strong> et <strong><span class="math inline">\(t\)</span></strong> étant un indicateur de temporelle.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Ainsi, on obtient un quantile pour chaque année. Le quantile de la dernière année est choisi et comparé au quantile issu du modèle stationnaire pour voir s’il y a de différences notables entre les modèles stationnaires et ceux non-stationnaires</span></p>
 </div>
 </div>
 </div>
@@ -789,7 +788,7 @@
 <div class="callout-content">
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le tableau ci-contre donne le nombre de stations dans lesquelles l’hypothèse nulle <strong><span class="math inline">\(H_0\)</span></strong> des tests utilisés a été rejetée. Les stations avec une tendance ou une auocorrélation à un seuil de significativité de 01% ont été exclues dans la suite de l’analyse. Au total, 235 stations ont des séries de maxiams annuels de débits avec indépendance et stationnarité. Les deux figures ci-dessous montrent une spatialisation des résultats des tests de tendance et d’autocorrélation.</span></p>
+<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le tableau ci-contre donne le nombre de stations dans lesquelles l’hypothèse nulle <strong><span class="math inline">\(H_0\)</span></strong> des tests utilisés a été rejetée. Les stations avec une tendance significative ou une auocorrélation à un seuil de significativité de 01% ont été exclues dans la suite de l’analyse. Au total, 235 stations ont des séries de maxiams annuels de débits avec indépendance et stationnarité. Les deux figures ci-dessous montrent une spatialisation des résultats des tests de tendance et d’autocorrélation.</span></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -845,8 +844,7 @@
 <hr class="separator gray">
 <p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Les pourcentages d’incertitudes d’estimation des quantiles placent également le modèle <strong>GEV</strong> en première position en terme de performance. <br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Pour les quantiles de période de retour 10 ans par exemple (voir tableau ci-dessous), les incertiudes autour des estimations par le modèle <strong>GEV</strong> sont les plus faibles dans 43%, 48% et 56% des stations respectivement avec les méthodes <strong>GMLE</strong>, <strong>MLE</strong> et <strong>L-moments</strong>.<br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Les incertitudes des modèles <strong>Gumbel</strong> et <strong>Exponentiel</strong> ne diffèrent que très légèrement.</span></p>
 <table>
-<caption>Comparaison des distributions basées sur les incertitudes autour des estimations de quantiles de période de retour 10 ans. <br><img data-src="assets/images/Meilleurs_distribution_et_repartition_spatiale_des_incertitudes.jpeg" alt="résultats de la comparaison des distributions basées sur les incertitudes autour des estimations de quantiles. Pour chaque bassin, la meilleure distribution est affichée avec le pourcentage d’incertitudes correspondant.">
-</caption>
+<caption>Comparaison des distributions basées sur les incertitudes autour des estimations de quantiles de période de retour 10 ans.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"><strong>Modèle</strong></th>
 <th style="text-align: left;"><strong>Méthode</strong></th>
@@ -910,6 +908,10 @@
 </tr>
 </tbody>
 </table>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="assets/images/Meilleurs_distribution_et_repartition_spatiale_des_incertitudes.jpeg"></p>
+<figcaption>résultats de la comparaison des distributions basées sur les incertitudes autour des estimations de quantiles. Pour chaque station, la meilleure distribution est affichée avec le pourcentage d’incertitudes correspondant.</figcaption></figure>
+</div>
 </div>
 </div>
 </div>
@@ -919,7 +921,7 @@
 <p><strong><span class="tabset-subtitle1">3. Spatialisation des valeurs des paramètres des modèles</span><br></strong></p>
 </div>
 <div class="callout-content">
-<p>Sur la base de l’évaluation des modèles fréquentiels, les paramètres de la <strong>GEV</strong> et de mla <strong>Gumbel</strong> ont été spatialisés. La <strong>GEV</strong> a quatre paramètres et la <strong>Gumbel</strong> en a trois.<br></p>
+<p>Sur la base de l’évaluation des modèles fréquentiels, les valeurs des paramètres des mosèles <strong>GEV</strong> et de la <strong>Gumbel</strong> ont été spatialisés. La <strong>GEV</strong> a quatre paramètres tandis que la <strong>Gumbel</strong> en a trois.<br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="assets/images/Répartition_Spatiale_Des_Valeurs_Des_Paramètres_De_La_GEV.jpeg"></p>
 <figcaption>Répartition spatiale des valeurs des paramètres du modèle GEV</figcaption></figure>
@@ -943,7 +945,7 @@
 <p><strong><span class="tabset-subtitle1">1. Quantiles non stationnaires</span><br></strong></p>
 </div>
 <div class="callout-content">
-<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le test de tendance de <strong>Mann-Kendall</strong> appliqué au seuil de 05% a permis de détecter 16 stations avec des tendances significatives (dont 07 avec des tendances positives et 09 avec des tendances négatives.)<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le paramètre de position (<span class="math inline">\(\mu\)</span>) de chacun des modèles fréquentiels a été exprimé comme une fonction du temps (utilisé comme covariable). Ainsi, l’estimation des paramètres a été effectuée à chaque pas de temps de la série de maximas annuels de débits.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Cette forme d’estimation des paramètres donne une version non stationnaire de chacun des trois modèles utilisés. Ces modèles ont permis d’intégrer les tendances sour forme linéaire dans l’estimation des quantiles de débits.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Les trois figures suivantes montrent les quantiles non-stationnaires estimés pour les 16 stations à partir des trois modèles. L’estimation des paramètres a été effectué par les méthodes <strong>MLE</strong> et <strong>GMLE</strong>. Par soucis de clareté, seuls les résultats de la méthode <strong>GMLE</strong> sont affichés.</span></p>
+<p><span class="column-body-text"><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le test de tendance de <strong>Mann-Kendall</strong> appliqué au seuil de 01% a permis de détecter 16 stations avec des tendances significatives (dont 07 avec des tendances positives et 09 avec des tendances négatives.)<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Le paramètre de position (<span class="math inline">\(\mu\)</span>) de chacun des modèles fréquentiels a été exprimé comme une fonction du temps (utilisé comme covariable). Ainsi, l’estimation des paramètres a été effectuée à chaque pas de temps de la série de maximas annuels de débits.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Cette forme d’estimation des paramètres donne une version non stationnaire de chacun des trois modèles utilisés. Ces modèles ont permis d’intégrer les tendances sour forme linéaire dans l’estimation des quantiles de débits.<br><br><strong><i class="fa-solid fa-angle-right" aria-label="angle-right"></i></strong> Les trois figures suivantes montrent les quantiles non-stationnaires estimés pour les 16 stations à partir des trois modèles. L’estimation des paramètres a été effectué par les méthodes <strong>MLE</strong> et <strong>GMLE</strong>. Par soucis de clareté, seuls les résultats de la méthode <strong>GMLE</strong> sont affichés.</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="assets/images/Quantiles_effectives/GMLE/GEV_GMLE_Quantiles_effectives.jpeg"></p>
 <figcaption>Quantiles non stationnaires estimés avec le modèle <strong>GEV non-stationnaire</strong> ajusté avec la méthode *<strong>GMLE (Generalized Maximum Likelihood)</strong>.</figcaption></figure>
@@ -983,7 +985,7 @@
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="assets/images/ReturnLevelPlots/incertitudes_plot_NS_vs_S_exponential_gmle.jpeg"></p>
-<figcaption>Incertitudes autour des estimations des quantiles de période de avec les modèles <strong>Exponentiel Stationnaire</strong> et <strong>Exponentiel GEV Non-Stationnaire</strong> ajustés à l’aide de la méthode <strong>GMLE</strong>. Les lignes tiretées noires et rouges représentent les bornes inférieure (2,5%) et supérieure (97,5%) des intervalles de confiances des modèles stationnaires et non-stationnaires, respectivement.</figcaption></figure>
+<figcaption>Incertitudes autour des estimations des quantiles de période de avec les modèles <strong>Exponentiel Stationnaire</strong> et <strong>Exponentiel Non-Stationnaire</strong> ajustés à l’aide de la méthode <strong>GMLE</strong>. Les lignes tiretées noires et rouges représentent les bornes inférieure (2,5%) et supérieure (97,5%) des intervalles de confiances des modèles stationnaires et non-stationnaires, respectivement.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -992,20 +994,7 @@
 </div>
 </div>
 </div>
-</section><section id="TheEnd" class="slide level2" data-menu-title="~Silde Finale~"><h2></h2>
-<p><br><br></p>
-<p><span class="slide-title"><i class="fa-solid fa-flag-checkered" aria-label="flag-checkered"></i> Fin de la présentation</span></p>
-<hr>
-<p><br><br></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="assets/images/merci.gif" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="references" class="slide level2 smaller scrollable" data-menu-title="~Références~"><h2></h2>
+</section><section id="references" class="slide level2 smaller scrollable" data-menu-title="Références"><h2></h2>
 <p><br><br></p>
 <p><span class="slide-title"><i class="fa-solid fa-folder" aria-label="folder"></i> Références</span></p>
 <hr>
@@ -1032,7 +1021,7 @@ Wald, A., and J. Wolfowitz. 1940. <span>“On a Test Whether Two Samples Are fro
 </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="site_libs/revealjs/plugin/reveal-fullscreen/fullscreen.js"></script><script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script><script src="site_libs/revealjs/plugin/verticator/verticator.js"></script><script src="site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="site_libs/revealjs/plugin/notes/notes.js"></script><script src="site_libs/revealjs/plugin/search/search.js"></script><script src="site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="site_libs/revealjs/plugin/reveal-fullscreen/fullscreen.js"></script><script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script><script src="site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="site_libs/revealjs/plugin/notes/notes.js"></script><script src="site_libs/revealjs/plugin/search/search.js"></script><script src="site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -1047,7 +1036,6 @@ Wald, A., and J. Wolfowitz. 1940. <span>“On a Test Whether Two Samples Are fro
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal","numbers":false},
 'chalkboard': {"buttons":true},
 'pointer': {"key":"p","color":"orange","pointerSize":16,"alwaysVisible":false},
-'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -1218,7 +1206,7 @@ Wald, A., and J. Wolfowitz. 1940. <span>“On a Test Whether Two Samples Are fro
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealFullscreen, RevealPointer, Verticator, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealFullscreen, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,

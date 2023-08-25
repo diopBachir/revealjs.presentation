@@ -29,7 +29,7 @@ format: revealjs
 
 Les données utilisées dans ce travail sont issues de la base de données [ADHI (the African Database of Hydrometric Indices)](https://doi.org/10.23708/LXGXQ9){target="_blank"}. <br>
 
-**{{< fa angle-right >}}** Mise en place par Tramblay _et al._ [-@trambaly_et_al_2021_adhi], cette base de donne fournit une multitude d'indices hydrométriques et hydrologiques calculés à partir de différentes sources de données.<br>
+**{{< fa angle-right >}}** Mise en place par Tramblay _et al._ [-@trambaly_et_al_2021_adhi], cette base de données fournit une multitude d'indices hydrométriques et hydrologiques calculés à partir de différentes sources de données.<br>
 
 **{{< fa angle-right >}}** Elle comprend 1466 stations, avec des séries de débits journaliers supérieures ou égales à 10 ans de données sur la période 1950-2018.<br>
 
@@ -99,7 +99,7 @@ donnees |>
 
 ::: {.body-text}
 
-La sélection des bassins a été effectuée sur la base de trois critères :
+La sélection des bassins a été effectuée sur la base de quatre critères :
 
 :::
 
@@ -116,9 +116,9 @@ La sélection des bassins a été effectuée sur la base de trois critères :
 :::: {.columns} 
 ::: {.column width="50%"}
 ::: {.callout-note icon=false}
-## [1. Profondeur temporelle des séries]{.tabset-subtitle1}<br>
+## [1. Longueur des séries de données]{.tabset-subtitle1}<br>
 
- [Ce critère renvoie à la profondeur temporelle des séries de maxima annuels de débits. L'approche **Block-Maxima (BM)** a permis de construire de telles séries. Une station doit avoir au moins 10 ans de données pour être sélectionnée dans cette première étape. La figure ci-contre montre la répartition spatiale des stations de la base ADHI (en Afrique de l'ouest) ayant des séries de maxima annuels supérieures ou égales à 10 ans. Au total, 318 stations ont plus de 10 ans de données sur les 441.]{.column-body-text}
+ [Ce critère renvoie à la profondeur temporelle des séries de maxima annuels de débits. L'approche **Block-Maxima (BM)** a permis de construire de telles séries. Une station doit avoir au moins 10 ans de données pour être sélectionnée dans cette première étape. La figure ci-contre montre la répartition spatiale des stations de la base ADHI (en Afrique de l'ouest) ayant des séries de maxima annuels supérieures ou égales à 10 ans. Au total, 318 stations ont au moins 10 ans de données sur les 441.]{.column-body-text}
 
 :::
 
@@ -176,8 +176,7 @@ La sélection des bassins a été effectuée sur la base de trois critères :
 
 :::
 ::: {.column width="50%"}
- ![Répartition de la superficie (Km^2^) des bassins retenus avec le
-critère 2 (détection de valeurs aberrantes). La ligne tiretée rouge matérialise le seuil retenu (150 000 Km^2^)](assets/images/Superficie_Bassins_Diagramme_En_Barre.jpg)
+ ![Répartition de la superficie (Km^2^) des bassins retenus avec le critère 2 (détection de valeurs aberrantes). La ligne tiretée rouge matérialise le seuil retenu (150 000 Km^2^)](assets/images/Superficie_Bassins_Diagramme_En_Barre.jpg)
 :::
 ::::
 

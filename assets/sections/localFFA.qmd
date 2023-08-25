@@ -54,7 +54,7 @@ flowchart TB
 [**{{< fa angle-right >}} Le contrôle de la série** de renvoie aux
 tests d'hypothèses de stationnarité et d’indépendance.<br>
 **{{< fa angle-right >}} Le choix du modèle fréquentiel** passe par l’ajustement de plusieurs distributions de probabilité, l’évaluation de la qualité d’ajustement de ces distributions et le choix du modèle qui s’ajuste le mieux aux données observées.<br>
-**{{< fa angle-right >}} L’exploitation du modèle fréquentiel** permet d’estimer la probabilité ou la fréquence d'occurrence des quantiles spécifiques de débits.]{.column-body-text}
+**{{< fa angle-right >}} L’exploitation du modèle fréquentiel** permet d’estimer la probabilité d'occurrence des quantiles de débits.]{.column-body-text}
 
 :::
 
@@ -80,8 +80,8 @@ tests d'hypothèses de stationnarité et d’indépendance.<br>
 ## [2. Contrôle des séries (hypothèses)]{.tabset-subtitle1}<br>
 [
     Deux tests statistiques ont été appliqués aux séries de maxima annuels de débits à des seuils de significativité différents (1%, 5% et 10%).<br>
-    **{{< fa angle-right >}}** le test non paramétrique de **Mann-Kendall** [@kendall_rank_1975 ; @mann1945nonparametric] a été utilisée pour tester l'hypothèse de stationnarité dans les séries.<br>
-    **{{< fa angle-right >}}** le test d'indépendance de **Wald-Wolfowitz** [@wald_test_1940] a été appliqué pour détecter l'existance d'une autocorrélation dans les séries de données.
+    **{{< fa angle-right >}}** Le test non paramétrique de **Mann-Kendall** [@kendall_rank_1975 ; @mann1945nonparametric] a été utilisée pour tester l'hypothèse de stationnarité dans les séries.<br>
+    **{{< fa angle-right >}}** Le test d'indépendance de **Wald-Wolfowitz** [@wald_test_1940] a été appliqué pour détecter l'existance d'une autocorrélation dans les séries de données.
 ]{.column-body-text}
 :::
 :::
@@ -109,10 +109,10 @@ tests d'hypothèses de stationnarité et d’indépendance.<br>
 ::: {.callout-note icon=false}
 ## [4. Modèles non stationnaires]{.tabset-subtitle1}<br>
 [
-    **{{< fa angle-right >}}** En contexte non-stationnaire, la méthode traditionnelle de l’analyse fréquentielle est inapplicable en raison du rejet des hypothèses de base (stationnarité et homogénéité).<br>
-    **{{< fa angle-right >}}** Une façon de prendre en compte cette tendance est d’établir une relation linéaire entre les paramètres du modèle fréquentiel et une ou plusieurs co-variables (le temps par exemple).<br>
+    **{{< fa angle-right >}}** En contexte non-stationnaire, la méthode traditionnelle de l’analyse fréquentielle est inapplicable en raison du rejet des hypothèses de base (stationnarité et homogénéité).<br><br>
+    **{{< fa angle-right >}}** Une façon de prendre en compte cette tendance est d’établir une relation linéaire entre les paramètres du modèle fréquentiel et une ou plusieurs co-variables. Le temps a été prise comme covariable dans ce travail.<br><br>
     **{{< fa angle-right >}}** Une simple tendance linéaire permet alors d’intégrer cette non-stationnarité dans l'analyse fréquentielle.<br><br>
-    **{{< fa angle-right >}}** Pour la **GEV** par exemple, exprimons le paramètre de position **$\mu$** comme une fonction linéaire du temps du temps **$\mu_{(t)}$**. Un quantile de débit au temps **$t$** peut être obtenu par la fonction quantile **$Q_t = GEV_{(μ(t)}, \delta, \xi)$**,  avec **$Q_t$** représentant le quantile estmé, **$\mu_{(t)} = \mu_0 + \mu1_{(t)}$** et **$t$** étant un indicateur de temporelle.<br><br>
+    **{{< fa angle-right >}}** Pour la **GEV** par exemple, exprimons le paramètre de position **$\mu$** comme une fonction linéaire du temps **$\mu_{(t)}$**. Un quantile de débit au temps **$t$** peut être obtenu par la fonction quantile **$Q_t = GEV_{(μ(t)}, \delta, \xi)$**,  avec **$Q_t$** représentant le quantile estmé, **$\mu_{(t)} = \mu_0 + \mu1_{(t)}$** et **$t$** étant un indicateur de temporelle.<br><br>
     **{{< fa angle-right >}}** Ainsi, on obtient un quantile pour chaque année. Le quantile de la dernière année est choisi et comparé au quantile issu du modèle stationnaire pour voir s’il y a de différences notables entre les modèles stationnaires et ceux non-stationnaires
 ]{.column-body-text}
 :::
@@ -132,7 +132,7 @@ tests d'hypothèses de stationnarité et d’indépendance.<br>
 ## [1. Tests d'hypotèses]{.tabset-subtitle1}<br>
 :::: {.columns} 
 ::: {.column width="50%"}
-[**{{< fa angle-right >}}** Le tableau ci-contre donne le nombre de stations dans lesquelles l'hypothèse nulle **$H_0$** des tests utilisés a été rejetée. Les stations avec une tendance ou une auocorrélation à un seuil de significativité de 01% ont été exclues dans la suite de l'analyse. Au total, 235 stations ont des séries de maxiams annuels de débits avec indépendance et stationnarité. Les deux figures ci-dessous montrent une spatialisation des résultats des tests de tendance et d'autocorrélation.]{.column-body-text}
+[**{{< fa angle-right >}}** Le tableau ci-contre donne le nombre de stations dans lesquelles l'hypothèse nulle **$H_0$** des tests utilisés a été rejetée. Les stations avec une tendance significative ou une auocorrélation à un seuil de significativité de 01% ont été exclues dans la suite de l'analyse. Au total, 235 stations ont des séries de maxiams annuels de débits avec indépendance et stationnarité. Les deux figures ci-dessous montrent une spatialisation des résultats des tests de tendance et d'autocorrélation.]{.column-body-text}
 :::
 ::: {.column width="50%"}
 ```{r}
@@ -189,16 +189,16 @@ df |>
 |                  | L-moments   |      132      |          56%      |
 | **GEV**          | MLE         |      113      |          48%      |
 |                  | GMLE        |      100      |          43%      |
-: Comparaison       des distributions basées sur les incertitudes autour des estimations de quantiles de période de retour 10 ans.
-<br>
-![résultats de la comparaison des distributions basées sur les incertitudes autour des estimations de quantiles. Pour chaque bassin, la meilleure distribution est affichée avec le pourcentage d’incertitudes correspondant.](assets/images/Meilleurs_distribution_et_repartition_spatiale_des_incertitudes.jpeg)
+: Comparaison  des distributions basées sur les incertitudes autour des estimations de quantiles de période de retour 10 ans.
+
+![résultats de la comparaison des distributions basées sur les incertitudes autour des estimations de quantiles. Pour chaque station, la meilleure distribution est affichée avec le pourcentage d’incertitudes correspondant.](assets/images/Meilleurs_distribution_et_repartition_spatiale_des_incertitudes.jpeg)
 
 ::: 
 
 ::: {.callout-note icon=false}
 ## [3. Spatialisation des valeurs des paramètres des modèles]{.tabset-subtitle1}<br>
 
-Sur la base de l'évaluation des modèles fréquentiels, les paramètres de la **GEV** et de mla **Gumbel** ont été spatialisés. La **GEV** a quatre paramètres et la **Gumbel** en a trois.<br>
+Sur la base de l'évaluation des modèles fréquentiels, les valeurs des paramètres des mosèles **GEV** et de la **Gumbel** ont été spatialisés. La **GEV** a quatre paramètres tandis que la **Gumbel** en a trois.<br>
 
 ![Répartition spatiale des valeurs des paramètres du modèle GEV](assets/images/Répartition_Spatiale_Des_Valeurs_Des_Paramètres_De_La_GEV.jpeg)
 
@@ -219,7 +219,7 @@ Sur la base de l'évaluation des modèles fréquentiels, les paramètres de la *
 ::: {.callout-note icon=false}
 ## [1. Quantiles non stationnaires]{.tabset-subtitle1}<br>
 
-[**{{< fa angle-right >}}** Le test de tendance de **Mann-Kendall** appliqué au seuil de 05% a permis de détecter 16 stations avec des tendances significatives (dont 07 avec des tendances positives et 09 avec des tendances négatives.)<br><br>
+[**{{< fa angle-right >}}** Le test de tendance de **Mann-Kendall** appliqué au seuil de 01% a permis de détecter 16 stations avec des tendances significatives (dont 07 avec des tendances positives et 09 avec des tendances négatives.)<br><br>
 **{{< fa angle-right >}}** Le paramètre de position ($\mu$) de chacun des modèles fréquentiels a été exprimé comme une fonction du temps (utilisé comme covariable). Ainsi, l'estimation des paramètres a été effectuée à chaque pas de temps de la série de maximas annuels de débits.<br><br>
 **{{< fa angle-right >}}** Cette forme d'estimation des paramètres donne une version non stationnaire de chacun des trois modèles utilisés. Ces modèles ont permis d'intégrer les tendances sour forme linéaire dans l'estimation des quantiles de débits.<br><br>
 **{{< fa angle-right >}}** Les trois figures suivantes montrent les quantiles non-stationnaires estimés pour les 16 stations à partir des trois modèles. L'estimation des paramètres a été effectué par les méthodes **MLE** et **GMLE**. Par soucis de clareté, seuls les résultats de la méthode **GMLE** sont affichés.]{.column-body-text}
@@ -249,7 +249,7 @@ Sur la base de l'évaluation des modèles fréquentiels, les paramètres de la *
 
 ![Incertitudes autour des estimations des quantiles de période de avec les modèles **GEV Stationnaire** et **GEV Non-Stationnaire** ajustés à l’aide de la méthode **GMLE**. Les lignes tiretées noires et rouges représentent les bornes inférieure (2,5%) et supérieure (97,5%) des intervalles de confiances des modèles stationnaires et non-stationnaires, respectivement.](assets/images/ReturnLevelPlots/incertitudes_plot_NS_vs_S_gev_gmle.jpeg)
 
-![Incertitudes autour des estimations des quantiles de période de avec les modèles **Exponentiel Stationnaire** et **Exponentiel GEV Non-Stationnaire** ajustés à l’aide de la méthode **GMLE**. Les lignes tiretées noires et rouges représentent les bornes inférieure (2,5%) et supérieure (97,5%) des intervalles de confiances des modèles stationnaires et non-stationnaires, respectivement.](assets/images/ReturnLevelPlots/incertitudes_plot_NS_vs_S_exponential_gmle.jpeg)
+![Incertitudes autour des estimations des quantiles de période de avec les modèles **Exponentiel Stationnaire** et **Exponentiel Non-Stationnaire** ajustés à l’aide de la méthode **GMLE**. Les lignes tiretées noires et rouges représentent les bornes inférieure (2,5%) et supérieure (97,5%) des intervalles de confiances des modèles stationnaires et non-stationnaires, respectivement.](assets/images/ReturnLevelPlots/incertitudes_plot_NS_vs_S_exponential_gmle.jpeg)
 
 :::
 

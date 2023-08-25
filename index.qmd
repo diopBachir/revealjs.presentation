@@ -67,26 +67,7 @@ format: revealjs
 
 ---
 
-## {#TheEnd data-menu-title="~Silde Finale~"}
-
-<br><br>
-
-[{{< fa flag-checkered >}} Fin de la présentation]{.slide-title}
-
-<hr>
-<br><br>
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "60%" 
-knitr::include_graphics("assets/images/merci.gif")
-```
-
----
-
-## {#references data-menu-title="~Références~"}
+## {#references data-menu-title="Références"}
 
 <br><br>
 
