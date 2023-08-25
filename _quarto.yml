@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: docs
 
+website:
+  title: "These Serigne Bassirou DIOP"
+
 format: 
   revealjs:
     html-math-method: mathjax
