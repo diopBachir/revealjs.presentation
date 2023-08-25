@@ -50,10 +50,6 @@ format: revealjs
 
 <center><span style='font-size: 60%; color: #d2e3f3; line-height:.01em; text-align: right'><br><br><br><br><br> Diapositives et Code Source disponibles sur [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/diopBachir/revealjs.presentation)</span></center>
 
-
-
-
-
 <!-- INTRODUCTION -->
 {{< include assets/sections/intro.qmd >}}
 
