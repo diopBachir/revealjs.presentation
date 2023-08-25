@@ -1,0 +1,15 @@
+<div class="header">
+    <section>
+        Régionalisation des crues en Afrique de l'ouest
+    </section>
+</div>
+
+<script>
+  function add_header() {
+    let header = document.querySelector("div.header");
+    let reveal = document.querySelector(".reveal");
+    reveal.insertBefore(header, reveal.firstChild);
+  }
+  
+  window.onload = add_header();
+</script>

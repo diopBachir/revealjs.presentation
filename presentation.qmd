@@ -1,0 +1,35 @@
+---
+# title: "Régionalisation des crues en Afrique de l'ouest"
+# subtitle: "Analyse Fréquentielle Locale"
+# author: "Serigne Bassirou DIOP"
+# include-after-body: header_text.html
+format:
+  revealjs:
+    slide-level: 3
+    slide-number: true
+    show-slide-number: all
+    center-title-slide: true
+    show-notes: true
+    progress: true
+    touch: true
+    smaller: true
+    scrollable: true
+    width: 1200
+    margin: 0.2
+    chalkboard: true
+    theme: default
+    logo: assets/logo.jpg
+    css: styles.scss
+    footer: "Régionalisation des crues en Afrique de l'ouest"
+    # reference-location: document # include footnotes to end of document
+    # incremental: true  
+---
+
+### Résumé
+
+| col1 | col2 | col3 | col4 |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+: Demonstration of pipe table syntax

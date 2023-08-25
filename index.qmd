@@ -1,0 +1,142 @@
+---
+engine: knitr
+# include-after-body: header_text.html
+bibliography: biblio.bib
+# reference-location: document
+# suppress-bibliography: true 
+
+format: 
+  revealjs:
+    html-math-method: mathjax
+    mermaid:
+      theme: dark
+    slide-number: true
+    chalkboard: true
+    code-link: true
+    highlight-style: a11y
+    show-slide-numbe: all
+    preview-links: true
+    width: 1200
+    smaller: true
+    scrollable: true
+    logo: assets/images/logo.jpg
+    theme: 
+      - styles.scss
+    footer: "THESE DE DOCTORAT"
+    # header: "SERIGNE BASSIROU DIOP"
+    auto-stretch: false
+    touch: true
+    controls: false
+    lightbox: auto
+    menu:
+      side: left
+      width: normal
+      numbers: false
+    pointer:
+      key: p
+      alwaysVisible: false
+      color: orange
+    # transition: slide
+    # collapse-callout:
+    #   all: true
+    # callout-appearance: simple
+revealjs-plugins:
+  - _extensions/fullscreen
+  - pointer
+  - attribution
+  # - spotlight
+  - mathjax3eqno
+  # - lightbox
+filters:
+  - reveal-header
+
+---
+
+## {#title-slide data-menu-title="Accueil" background-image="assets/images/background_image.jpg"} 
+
+<!-- remove header in first slide -->
+::: header
+```{=latex}
+\definecolor{bgblank}{HTML}{#013660}
+```
+\textcolor{bgblank}{.}
+:::
+
+<br><br>
+
+[Régionalsation des crues en Afrique de l'ouest]{.custom-title}
+
+[Analyse fréquentielle locale]{.custom-subtitle}
+
+<br><br><br>
+
+:::: {.columns} 
+
+::: {.column width="27%"}
+[Encadrants]{.custom-subtitle2}<br>
+[Ansoumana BODIAN]{.custom-subtitle3}<br>
+[Yves TRAMBLAY]{.custom-subtitle3}<br>
+[Alain DEZETTER]{.custom-subtitle3}<br>
+:::
+
+::: {.column width="40%"}
+[Auteur]{.custom-subtitle2}<br>
+[Serigne Bassirou DIOP]{.custom-subtitle3}<br>
+[Université Gaston Berger de Saint-Louis]{.custom-subtitle3}<br>
+[Parcours Ecosystèmes et Environnement]{.custom-subtitle3}
+:::
+
+::: {.column width="33%"}
+[Indications]{.custom-subtitle2}<br>
+[Ceci est une présentation [Quarto `r fontawesome::fa("link", fill = "#78A540", a11y = "sem")`](https://quarto.org).]{.custom-subtitle3}<br>
+[Plein écran : touche {f}]{.custom-subtitle3}<br>
+[Pointer laser : touche {p}]{.custom-subtitle3}
+:::
+
+::::
+
+<center><span style='font-size: 60%; color: #d2e3f3; line-height:.01em; text-align: right'><br><br><br><br><br> Diapositives et Code Source disponibles sur [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/UCSB-MEDS/customizing-quarto-websites).</span></center>
+
+
+
+
+
+<!-- INTRODUCTION -->
+{{< include assets/sections/intro.qmd >}}
+
+<!-- DONNEES -->
+
+{{< include assets/sections/data.qmd >}} 
+
+<!-- ANALYSE FREQUENTIELLE LOCALE -->
+
+{{< include assets/sections/localFFA.qmd >}} 
+
+---
+
+## {#TheEnd data-menu-title="~Silde Finale~"}
+
+<br><br>
+
+[{{< fa flag-checkered >}} Fin de la présentation]{.slide-title}
+
+<hr>
+<br><br>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("assets/images/merci.gif")
+```
+
+---
+
+## {#references data-menu-title="~Références~"}
+
+<br><br>
+
+[{{< fa folder >}} Références]{.slide-title}
+
+<hr>

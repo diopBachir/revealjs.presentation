@@ -1,0 +1,30 @@
+---
+titlepage: false
+format: 
+  PrettyPDF-pdf:
+    keep-tex: true
+    fig-pos: 'H'
+---
+
+# Résultats de l'analyse fréquentielle locale
+
+## Test d'hypothèses
+
+Le tableau ci-contre donne le nombre de stations dans lesquelles l'hypothèse nulle **$H_0$** a été rejetées. Les stations avec une tendance ou une auocorrélation à un seuil de 01% ont été exclues dans la suite de l'anayse fréquentielle locale.
+
+```{r}
+#| tbl-cap: "Nombre (ou pourcentage) de stations dans lesquelles les hypothèses de stationnarité et/ou d'indépendance ont été rejetées"
+#| echo: false
+#| 
+
+data<- data.frame(
+  Test = c("Mann-Kendall", "Wald-Wolfowitz"),
+  `01%` = c(16, 01), `05%` = c(36, 16), `10%` = c(50, 18)
+) 
+names(data)<- c("Test", "01%", "05%", "10%")
+data|>
+    knitr::kable(format="latex", booktabs = T) |>
+    kableExtra::row_spec(0, bold = T) |>
+    kableExtra::row_spec(1, extra_css = "border-bottom-style: none")
+```
+

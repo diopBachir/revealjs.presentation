@@ -1,0 +1,425 @@
+// /* Titre du document */
+// h1.title {
+//   font-family: Georgia;
+//   font-size: 1.7em !important;
+//   line-height: 90px;
+// }
+// /* Le souss-titre du documen */
+// p.subtitle {
+//   font-family: Georgia;
+//   font-size: 1.7em;
+//   line-height: 90px;
+// }
+
+/* Titre des slides */
+// h1 {
+//   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//   font-size: 1em;
+//   line-height: 90px;
+//   color: red;
+// }
+
+// /* Nom de l'auteur */
+// div.quarto-title-authors {
+//   font-family: Georgia !important;
+//   font-size: 1.5em !important;
+//   line-height: 90px;
+// }
+
+
+
+// /* slides control */
+// .reveal .slides {
+//   margin-top: 0.2em;
+//   margin-bottom: 0.2em;
+//   margin-left: 0.2em;
+//   margin-right: 0.2em;
+// }
+
+// /* Titre des slides */
+
+
+// /* Slide numbers to the bottom-left */
+// .slide-number, .reveal.has-logo .slide-number {
+//   bottom: .6em !important;
+//   left: unset !important;
+//   top: unset !important;
+//   color: #777777 !important;
+// }
+
+/*-- scss:defaults --*/
+
+// fonts
+//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
+
+// Fonts (CSS rules)
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Sanchez', serif; 
+//$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+
+// Colors
+$baby-blue: #d2e3f3;
+$teal: #047C90;
+$dark-blue: #003660;
+$white: #FFFFFF;
+$green: #78A540; 
+$magenta: #900C3F;
+$white: #FFFFFF;
+$off-white: #F7F7F7; 
+$gray: #ADADAD; 
+$black: #000000; 
+
+// scss variables
+$presentation-title-slide-text-align: "left";
+//$presentation-font-size-root: 23px;
+$body-bg: $white;
+$link-color: $green; 
+$code-color: $magenta;
+$code-bg: $white;
+$code-block-font-size: 0.4em;
+$code-block-bg: $off-white;
+
+/*-- scss:rules --*/
+
+// HTML selectors //
+
+strong, b {
+  font-weight: 900; // does not change weight?
+  color: $teal;
+}
+
+th {
+font-size: 14pt;  
+}
+
+// tr
+tr.odd{
+  border: 1pt solid white !important;
+  // border-bottom: 1px solid black;
+  // border-top: 1px solid black;
+}
+tr.even{
+  border: 1pt solid white impot !important;
+  // border-bottom: 1px solid black;
+  // border-top: 1px solid black;
+}
+
+.rowspan-th{
+  vertical-align: middle !important;
+  text-align:left !important;
+  font-weight: bold !important;
+  font-size:13pt !important;
+}
+
+td {
+  font-family: $font-family-serif;
+  font-size: 13pt;
+}
+
+// horizontal line
+hr {
+  border: 5px solid $dark-blue;
+  border-radius: 0px;
+  margin-bottom: 30px;
+}
+
+hr.separator.gray {
+  border: .5px solid $gray;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+table {
+  width: 100% !important;
+}
+
+div.csl-entry{
+  font-size: 14pt !important;
+  line-height: 3em !important;
+}
+
+// .quarto-figure{
+//   width: 100% !important;
+// }
+
+div.github_repo{
+  top: 15cm !important;
+  font-size: 15pt; 
+  color: #d2e3f3;
+}
+
+// tables and figures  caption
+caption {
+  font-size: 16pt !important;
+	line-height: 1.7em !important;
+  text-align: center !important;
+  color: $teal !important;
+  margin-bottom: -.3em !important;
+  line-height: 1.2em !important;
+}
+figcaption {
+  font-size: 16pt !important;
+	line-height: 1.7em !important;
+  text-align: center !important;
+  color: $teal !important;
+  margin-top: -.44em !important;
+  line-height: 1em !important;
+}
+
+// Class selectors //
+
+/* logo */
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  bottom: unset !important;
+  left: unset !important;
+  // top: 0em;
+  // right: .6em;
+  // border-bottom: 3px solid gray;
+  border-color: #FCD88B;
+  margin-top: 5px;
+  width: 70%;
+  height: 40px !important;
+  width: 7580x !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+/* header control */
+.reveal .header {
+    // font-family: $font-family-serif;
+    // position: absolute;
+    // border-bottom: 3px solid gray;
+    // border-color: $teal;
+    // top: .59em;
+    // left: 10.8em;
+    font-size: 15pt !important;
+    color: $black;
+    // font-weight: 700;
+}
+// .reveal-header .header-text{
+//   font-size: 5pt !important;
+//   color: $gray !important;
+//   font-style: italic !important;
+//   text-align: left !important;
+// }
+
+/* footer control */
+.reveal .footer {
+    font-family: $font-family-serif !important;
+    font-size: 9pt !important;
+    text-align: right !important;
+    color: gray !important;
+    bottom: .65em !important;
+    right: .8em !important;
+    font-style: italic !important;
+  }
+
+/* Slide numbers to the bottom-left */
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: .8em !important;
+  right: unset !important;
+  bottom: unset !important;
+  color: $green !important;
+}
+
+.custom-title { 
+  font-family: $font-family-serif;
+  color: $white;
+  font-size: 1em;
+  font-weight: bold;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.custom-tabset-title{
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.tabset-subtitle1{
+  font-family: $font-family-serif !important;
+  color: $dark-blue !important;
+  font-size: 18pt !important;
+  font-style: italic;
+  font-weight: bold !important;
+  border-bottom: 2px solid $teal !important;
+}
+
+.column-body-text{
+  font-family: $font-family-serif !important;
+  color: $black !important;
+  font-size: 14pt !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  text-align-last:center !important;
+  /* for IE9 */
+  -ms-text-align-last:center !important;
+  // line-height: -1em !important;
+}
+
+.custom-outline {
+  font-family: $font-family-serif;
+  color: $white;
+  font-size: 3em;
+  text-align: right !important;
+}
+
+.custom-outline2 {
+  font-family: $font-family-serif;
+  color: $white;
+  font-size: 1.3em;
+  text-align: right !important;
+
+}
+
+.custom-outline1 {
+  font-family: $font-family-serif;
+  color: $white;
+  font-size: 2em;
+  text-align: right !important;
+
+}
+
+.custom-subtitle { 
+  font-family: $font-family-serif;
+  color: $white;
+  font-size: .9em;
+  font-weight: bold;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.custom-subtitle2 { 
+  font-family: $font-family-sans-serif;
+  color: $white;
+  font-weight: bold;
+  font-size: .8em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.custom-subtitle3 { 
+  font-family: $font-family-sans-serif;
+  color: $white;
+  font-weight: 400;
+  font-size: 0.7em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.title-footer { 
+  text-align: center !important;
+  color: $baby-blue;
+  font-size: 0.4em !important;
+}
+
+.slide-title {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: .3em;
+}
+
+.slide-title-smaller {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.slide-title-smallest {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.large-body-text {
+  // font-family: $font-family-sans-serif;
+  color: $teal;
+  font-size: 1em;
+  color: $black !important;
+}
+
+.medium-body-text {
+  font-size: 25px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+  color: $black !important;
+}
+
+.body-text {
+	font-size: 25px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+  text-align: justify;
+  color: $black;
+}
+
+.smaller-body-text{
+  font-size: 21px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.gray-text {
+  color: $gray;
+}
+
+.important-text-bg {
+  background-color: rgba(217, 178, 189, 0.5); 
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  padding-right: 5px; 
+  padding-left: 8px; 
+  border-radius: 25px;
+}
+
+.blue-underline { 
+  text-decoration: underline $dark-blue;
+  text-underline-offset: 10px; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
+  text-decoration-thickness: 4px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.page-center {
+  //padding: 70px 0;
+  line-height: 700px;
+  text-align: center;
+}
+
+.topbr {
+    display: block;
+    margin-top: 1em;
+}
+
+.bottombr {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.panel-tabset {
+  font-size: 30px;
+}
+
+// -----------------------------------------------

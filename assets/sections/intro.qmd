@@ -1,0 +1,29 @@
+---
+format: revealjs
+---
+
+## {#introduction data-menu-title="Introduction"}
+
+[{{< fa pen >}} Introduction]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+
+<br>
+Ce sujet de thèse porte sur l'analyse fréquentielle des crues en Afrique de l'ouest et  associe 3 volets :
+
+:::
+
+::: {.body-text}
+**1.** une analyse locale basée sur les mesures
+
+**2.** une analyse régionale pour tenter d'extrapoler les données sur les crues pour des bassins non jaugés **et**
+
+**3.** une analyse prospective des scénarios futurs
+:::
+
+::: {.body-text}
+<br><br>
+La supervision de ce travail de thèse est assurée par [Ansoumana BODIAN](https://www.researchgate.net/profile/Ansoumana-Bodian){target="_blank"} (Université Gaston Berger de Saint-Louis),  [Yves TRAMBLAY](https://www.researchgate.net/profile/Yves-Tramblay){target="_blank"} (HydroSciences Montpellier) et [Alain DEZETTER](https://www.researchgate.net/profile/Alain-Dezetter){target="_blank"} (HydroSciences Montpellier).
+:::

@@ -1,0 +1,211 @@
+---
+format: revealjs
+---
+
+##  {#donnees data-menu-title="Données" background="#053660"}
+
+<br><br>
+[{{< fa database >}} Données]{.custom-outline}
+
+<br><br>
+[1. Source et Description]{.custom-outline2} <br><br>
+[2. Zone d'étude]{.custom-outline2} <br><br>
+[2. Critère de sélection des stations]{.custom-outline2} <br><br>
+[2. Inventaire de données]{.custom-outline2}
+
+---
+
+## {#donnee data-menu-title=""}
+
+[{{< fa database >}} Données]{.slide-title}
+
+<hr>
+
+::: {.panel-tabset}
+
+## [Source]{.custom-tabset-title}
+
+::: {.body-text .topbr .bottombr}
+
+Les données utilisées dans ce travail sont issues de la base de données [ADHI (the African Database of Hydrometric Indices)](https://doi.org/10.23708/LXGXQ9){target="_blank"}. <br>
+
+**{{< fa angle-right >}}** Mise en place par Tramblay _et al._ [-@trambaly_et_al_2021_adhi], cette base de donne fournit une multitude d'indices hydrométriques et hydrologiques calculés à partir de différentes sources de données.<br>
+
+**{{< fa angle-right >}}** Elle comprend 1466 stations, avec des séries de débits journaliers supérieures ou égales à 10 ans de données sur la période 1950-2018.<br>
+
+**{{< fa angle-right >}}** La durée moyenne des relevés est de 33 ans et 131 stations ont des relevés complets sur 50 ans [@trambaly_et_al_2021_adhi]. <br>
+
+:::
+
+:::: {.columns}
+::: {.column width="40%"}
+| Pays                | Effectif             | Pourcentage |
+|:--------------------|---------------------:|-------------:|
+| Afrique du nord     | 105                  | 07%         |
+| Afrique centrale    | 622                  | 42%         |
+| Afrique du sud      | 205                  | 14%         |
+| Afrique de l'est    | 93                   | 06%         |
+| Afrique de l'ouest  | 441                  | 30%         |
+: Nombre de stations par région géographique dans la base ADHI {tbl-colwidths="[50,25,25]" .hover}
+:::
+::: {.column width="60%"}
+![Répartition spatiale des stations de la base ADHI](assets/images/adhi_all_stations_loc_map.jpg)
+:::
+::::
+
+<!-- --------------------------------------------------------------- -->
+
+## [Données utilisées]{.custom-tabset-title}
+
+::: {.body-text .topbr .bottombr}
+
+Cette étude a été réalisée sur la région ouest-africaine. Les données de la base de données ADHI utilisées dans ce travail concernent donc les stations localisées en Afrique de l'ouest. <br>
+
+**{{< fa angle-right >}}** La base comporte 441 stations réparties dans les différens pays de la région. <br>
+
+**{{< fa angle-right >}}**  La superficie des bassins varie de 95 à 2150000 km^2^ et la plus longue série de débits journaliers est égale 44 années d'enregistrement. 
+
+:::
+
+:::: {.columns}
+::: {.column width="40%"}
+```{r}
+#| tbl-cap: "Nombre de stations par pays dans la base ADHI en Afrique de l'ouest"
+#| echo: false
+
+# packages
+suppressPackageStartupMessages(library(dplyr))
+
+# data
+donnees<- utils::read.csv2("assets/data/adhi_west_africa_stations_by_country.csv")
+donnees |>
+    knitr::kable(format="html", booktabs = T) |>
+    kableExtra::kable_styling(bootstrap_options=c("striped", "hover")) |>
+    kableExtra::row_spec(0, bold = T) |>
+    kableExtra::row_spec(1:12, extra_css = "border-bottom-style: none")
+```
+
+:::
+::: {.column width="60%"}
+![Répartition spatiale des stations de la base ADHI en Afrique de l'ouest](assets/images/carte_de_localisation_base_adhi.jpg)
+:::
+::::
+
+<!-- --------------------------------------------------------------- -->
+
+## [Séléction des bassins]{.custom-tabset-title}
+
+::: {.body-text .topbr .bottombr}
+
+::: {.body-text}
+
+La sélection des bassins a été effectuée sur la base de trois critères :
+
+:::
+
+```{css, echo = FALSE}
+.justify {
+  text-align: justify !important
+}
+```
+
+:::
+
+::: {.justify}
+
+:::: {.columns} 
+::: {.column width="50%"}
+::: {.callout-note icon=false}
+## [1. Profondeur temporelle des séries]{.tabset-subtitle1}<br>
+
+ [Ce critère renvoie à la profondeur temporelle des séries de maxima annuels de débits. L'approche **Block-Maxima (BM)** a permis de construire de telles séries. Une station doit avoir au moins 10 ans de données pour être sélectionnée dans cette première étape. La figure ci-contre montre la répartition spatiale des stations de la base ADHI (en Afrique de l'ouest) ayant des séries de maxima annuels supérieures ou égales à 10 ans. Au total, 318 stations ont plus de 10 ans de données sur les 441.]{.column-body-text}
+
+:::
+
+:::
+::: {.column width="50%"}
+ ![Répartition spatiale des bassins de la base ADHI en Afrique de l’ouest ayant une série de maxima annuels de débits supérieure ou égale à 10 ans.](assets/images/west_africa_ann_max_temporal_depth_spatialisation.jpeg)
+:::
+::::
+
+
+
+:::: {.columns} 
+::: {.column width="50%"}
+::: {.callout-note icon=false}
+## [2. Détection de valeurs aberrantes]{.tabset-subtitle1}<br>
+
+ [Le modèle fréquentiel **GEV (stationnaire)** a été ajusté aux séries de maxima annuels de débits. L'ajustement a été effectué avec la méthode des **L-moments** sur les 318 stations ayant au moins 10 ans de données. La détection des valeurs aberrantes a été effectuée de manière graphique. Après suppression de ces valeurs, la première étape est reprise. Si la série résultante du nettoyage de la série originale après ajustement de la **GEV** a une longueur inférieure à 10 ans, la station est exclue.]{.column-body-text}
+
+:::
+
+:::
+::: {.column width="50%"}
+ ![Exemple d'ajustement du modèle GEV (stationnaire) à une série de maxima annuels)](assets/images/exemple_ajustement_gev.jpg)
+:::
+::::
+
+
+
+:::: {.columns} 
+::: {.column width="50%"}
+::: {.callout-note icon=false}
+## [3. Type de fonctionnement des bassins]{.tabset-subtitle1}<br>
+
+ [Ce critère porte sur le type de fonctionnement des bassins. Il s'agit de voir si un bassin a un fonctionnement naturel ou si le fonctionnement de ce dernier est influencé par un ou plusieurs barrages. Pour effectuer cette tâche, le contour de chaque bassin a été superposé à une couche vectorielle des barrages du monde extraite dans la base de données [GranD](https://www.globaldamwatch.org/grand/){target="_blank"} et une couche vectorielle mondiale des réseaux hydrographiques ([HydroRIVERS](https://www.hydrosheds.org/products/hydrorivers){target="_blank"}) extraite dans la base de données [HydroSHEDS](https://www.hydrosheds.org/products/hydrorivers){target="_blank"}.
+ Cependant, un bassin avec un ou plusieurs barrages n’est pas exclu si les barrages sont très éloignés de l’exutoire ou si aucun bassin n’est situé sur le cours d’eau principal du réseau hydrographique.]{.column-body-text}
+
+:::
+
+:::
+::: {.column width="50%"}
+ ![Illustration d'un bassin à fonctionnement naturel (a) et d'un bassin à fonctionnement influencé (b). Les points bleus et rouge représentent respectivement l’exutoire et le(s) barrage(s)](assets/images/barrage_criteria_example.jpg)
+:::
+::::
+
+
+
+:::: {.columns} 
+::: {.column width="50%"}
+::: {.callout-note icon=false}
+## [4. Superficie des bassins]{.tabset-subtitle1}<br>
+
+ [Un seuil de 150 000 Km^2^ a été retenu pour la sélection des bassins. Ce seuil a été jugé adéquat car au-delà de cette valeur, les bassins se singularisent en termes de superficie, ce qui constitue un obstacle à la régionalisation (étape suivant l’analyse fréquentielle locale).]{.column-body-text}
+
+:::
+
+:::
+::: {.column width="50%"}
+ ![Répartition de la superficie (Km^2^) des bassins retenus avec le
+critère 2 (détection de valeurs aberrantes). La ligne tiretée rouge matérialise le seuil retenu (150 000 Km^2^)](assets/images/Superficie_Bassins_Diagramme_En_Barre.jpg)
+:::
+::::
+
+:::
+
+<!-- --------------------------------------------------------------- -->
+
+
+## [Base opérationnelle]{.custom-tabset-title}
+
+::: {.justify}
+
+::: {.body-text .topbr .bottombr}
+
+**{{< fa angle-right >}}** Au total, 251 stations ont été retenues sur un total initial de 441 stations.<br>
+**{{< fa angle-right >}}** Ces 251 bassins constituent la base de données opérationnelle pour l’analyse fréquentielle locale.
+
+:::
+
+:::: {.columns} 
+::: {.column width="50%"}
+ ![Nombre de stations en fontion du nombre d'années de données disponibles](assets/images/west_africa_ann_max_temporal_depth.jpeg)
+:::
+::: {.column width="50%"}
+ ![Cohérence temporelle des séries de maxima annuels de débits des 251 bassins retenus après inventaire](assets/images/west_africa_consistency_plot.jpg)
+:::
+::::
+
+:::
+
+:::
