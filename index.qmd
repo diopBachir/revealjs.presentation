@@ -19,7 +19,7 @@ format: revealjs
 
 [Analyse fréquentielle locale]{.custom-subtitle}
 
-<br><br><br>
+<br><br><br><br>
 
 :::: {.columns} 
 
@@ -46,7 +46,7 @@ format: revealjs
 <br><br><br>
 ::::
 
-<center><span style='font-size: 60%; color: #d2e3f3; line-height:.01em; text-align: right'><br><br><br><br><br> Diapositives et Code Source disponibles sur [`r fontawesome::fa("github", fill="#d2e3f3", a11y = "sem")`](https://github.com/diopBachir/revealjs.presentation)</span></center>
+<center><span style='font-size: 60%; color: #d2e3f3; line-height:.01em; text-align: right'><br><br> Diapositives et Code Source disponibles sur [`r fontawesome::fa("github", fill="#d2e3f3", a11y = "sem")`](https://github.com/diopBachir/revealjs.presentation){target="_blank"}</span></center>
 
 <!-- INTRODUCTION -->
 {{< include assets/sections/intro.qmd >}}

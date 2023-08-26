@@ -59,11 +59,11 @@ Les données utilisées dans ce travail sont issues de la base de données [ADHI
 
 ::: {.body-text .topbr .bottombr}
 
-Cette étude a été réalisée sur la région ouest-africaine. Les données de la base de données ADHI utilisées dans ce travail concernent donc les stations localisées en Afrique de l'ouest. <br>
+Cette étude a été réalisée sur la région ouest-africaine. <br>
 
-**{{< fa angle-right >}}** La base comporte 441 stations réparties dans les différens pays de la région. <br>
+**{{< fa angle-right >}}** La base ADHI comporte 441 stations réparties dans les différens pays d'Afrique de l'ouest. <br>
 
-**{{< fa angle-right >}}**  La superficie des bassins varie de 95 à 2150000 km^2^ et la plus longue série de débits journaliers est égale 44 années d'enregistrement. 
+**{{< fa angle-right >}}**  La superficie des bassins ouest-africains présents dans la base de données varie de 95 à 2150000 km^2^ et la plus longue série de débits journaliers est égale 44 années d'enregistrement. 
 
 :::
 

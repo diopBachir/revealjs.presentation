@@ -15,7 +15,7 @@ format:
     code-link: true
     highlight-style: a11y
     show-slide-numbe: all
-    preview-links: true
+    # preview-links: true
     width: 1200
     smaller: true
     scrollable: true
