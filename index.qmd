@@ -15,7 +15,7 @@ format: revealjs
 \textcolor{bgblank}{.}
 :::
 
-[Régionalsation des crues en Afrique de l'ouest]{.custom-title}
+[Régionalisation des crues en Afrique de l'ouest]{.custom-title}
 
 [Analyse fréquentielle locale]{.custom-subtitle}
 
