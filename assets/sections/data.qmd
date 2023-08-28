@@ -42,8 +42,8 @@ Les données utilisées dans ce travail sont issues de la base de données [ADHI
 | Pays                | Effectif             | Pourcentage |
 |:--------------------|---------------------:|-------------:|
 | Afrique du nord     | 105                  | 07%         |
-| Afrique centrale    | 622                  | 42%         |
-| Afrique du sud      | 205                  | 14%         |
+| Afrique du sud      | 622                  | 42%         |
+| Afrique centrale    | 205                  | 14%         |
 | Afrique de l'est    | 93                   | 06%         |
 | Afrique de l'ouest  | 441                  | 30%         |
 : Nombre de stations par région géographique dans la base ADHI {tbl-colwidths="[50,25,25]" .hover}
@@ -61,7 +61,7 @@ Les données utilisées dans ce travail sont issues de la base de données [ADHI
 
 Cette étude a été réalisée sur la région ouest-africaine. <br>
 
-**{{< fa angle-right >}}** La base ADHI comporte 441 stations réparties dans les différens pays d'Afrique de l'ouest. <br>
+**{{< fa angle-right >}}** La base ADHI comporte 441 stations réparties dans les différents pays d'Afrique de l'ouest. <br>
 
 **{{< fa angle-right >}}**  La superficie des bassins ouest-africains présents dans la base de données varie de 95 à 2150000 km^2^ et la plus longue série de débits journaliers est égale 44 années d'enregistrement. 
 
